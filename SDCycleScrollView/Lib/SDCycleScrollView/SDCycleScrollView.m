@@ -602,6 +602,9 @@ NSString * const ID = @"SDCycleScrollViewCell";
             if (!image) {
                 image = [UIImage imageWithContentsOfFile:imagePath];
             }
+            if (!image) {
+                image = self.placeholderImage;
+            }
             cell.imageView.image = image;
         }
     } else if (!self.onlyDisplayText && [imagePath isKindOfClass:[UIImage class]]) {
