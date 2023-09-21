@@ -309,6 +309,9 @@ NSString * const ID = @"SDCycleScrollViewCell";
         self.mainView.scrollEnabled = NO;
         [self invalidateTimer];
     }
+
+    // imagePathsGroup为空，显示backgroundImageView
+    [self.backgroundImageView setHidden: imagePathsGroup.count > 0];
     
     [self setupPageControl];
     [self.mainView reloadData];
